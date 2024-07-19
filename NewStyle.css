@@ -2,16 +2,17 @@ html {
     font-size: 16px;
     color: white;
 }
+
 body {
     background-color: black;
     display: flex;
     flex-direction: column;
-    
+    margin: 0;
 }
+
 .header {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
     align-items: center;
     background-color: black;
     width: 100%;
@@ -19,55 +20,60 @@ body {
     position: fixed;
     top: 0;
     z-index: 1000;
-    left: 0;
-    
-
+    padding: 0 20px;
 }
 
 .header .logo {
-    margin-left: 20px;
     font-size: 2.5rem;
     font-weight: bold;
     color: white;
 }
+
 .header .navbar {
     display: flex;
     justify-content: space-between;
-    margin-right: 20px;
-    width: 300px;
     font-size: 1.5rem;
-    
 }
-.navbar  a {
-    color: white;
 
+.header .navbar a {
+    color: white;
+    margin-left: 20px;
 }
+
+.header .menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
 a { 
     text-decoration: none;
 }
+
 .home {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 100vh;
-    width: 60%;
+    padding-top: 100px;
     padding-left: 30px;
-
-}
-.home-content {
-    margin-top: 100px;
-    
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .home-content h1 {
     font-size: 3.2rem;
 }
-.home-content h3  {
+
+.home-content h3 {
     font-size: 2rem;
 }
+
 .home-content p {
     font-size: 1.2rem;
 }
+
 .btn-box {
     display: flex;
     justify-content: space-around;
@@ -76,6 +82,7 @@ a {
     height: 50px;
     margin: 25px auto;
 }
+
 .btn-box a {
     font-size: 1.5rem;
     font-weight: 700;
@@ -92,29 +99,72 @@ a {
 .home-skills {
     display: flex;
     justify-content: space-around;
-    width: 50%;
     align-items: center;
     height: 50px;
     margin: 50px 0;
+    width: 100%;
 }
+
 .home-skills h4 {
     font-size: 2rem;
 }
-.home-skills  a {
+
+.home-skills a {
     font-size: 2rem;
 }
-.home-contact h4 {
-    font-size: 2rem;
-}
-.home-contact a {
-    font-size: 2rem;
-}
+
 .home-contact {
     display: flex;
     justify-content: space-around;
-    width: 50%;
     align-items: center;
     height: 50px;
     margin-bottom: 50px;
+    width: 100%;
+}
+
+.home-contact h4, .home-contact a {
+    font-size: 2rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: black;
+    }
+
+    .header .navbar.active {
+        display: flex;
+    }
+
+    .header .menu-toggle {
+        display: block;
+    }
+
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .home-content p {
+        font-size: 1rem;
+    }
+
+    .btn-box {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+
+    .home-skills, .home-contact {
+        flex-direction: column;
+        width: 100%;
+    }
 }
 
