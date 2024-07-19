@@ -33,7 +33,7 @@ body {
     display: flex;
     justify-content: space-between;
     font-size: 1.5rem;
-    margin-right: 20px;
+    margin-right: auto; /* Align navbar to the left */
 }
 
 .header .navbar a {
@@ -166,6 +166,18 @@ a {
     .home-skills, .home-contact {
         flex-direction: column;
         width: 100%;
+        align-items: center;
+    }
+
+    .home-skills h4, .home-contact h4 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .home-skills a, .home-contact a {
+        display: inline-block;
+        margin: 5px;
     }
 }
+
 
