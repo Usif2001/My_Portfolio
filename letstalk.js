@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Perform action to schedule appointment (e.g., send email, integrate Google Meet)
         sendAppointmentEmail(appointmentDateTime, name, company);
-        alert(`Appointment scheduled for: ${appointmentDateTime}`);
+        alert(`Thank you for trying to contact me. Unfortunately, your request has not been submitted because this function is still under construction.`);
 
         // Clear form or perform further actions as needed
         appointmentDateTimeInput.value = '';
