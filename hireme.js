@@ -13,7 +13,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Form submission interaction
 document.querySelector('form').addEventListener('submit', function (e) {
     e.preventDefault();
-    alert('Thank you for contacting us! We will get back to you shortly.');
+    alert('Thank you for trying to contact me. Unfortunately, your request has not been submitted because this function is still under construction.');
     this.reset();
 });
 
